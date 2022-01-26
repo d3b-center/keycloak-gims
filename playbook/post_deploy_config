@@ -1,0 +1,17 @@
+#!/bin/bash
+set -e
+
+echo "
+█▀█ █▀█ █▀ ▀█▀ ▄▄ █▀▄ █▀▀ █▀█ █░░ █▀█ █▄█ ▄▄ █▀▀ █▀█ █▄░█ █▀▀ █ █▀▀
+█▀▀ █▄█ ▄█ ░█░ ░░ █▄▀ ██▄ █▀▀ █▄▄ █▄█ ░█░ ░░ █▄▄ █▄█ █░▀█ █▀░ █ █▄█
+"
+
+export $(aws s3 cp s3://$account_name-${TF_VAR_account_id}-"${region}"-"${TF_VAR_environment}"-secrets/${TF_VAR_projectName}/terraform-config/terraform.secrets - | xargs) > /dev/null 2>&1
+
+cd ../terraform
+rm -rf .terraform
+terraform init -backend="true" -backend-config="config/$TF_VAR_organization/$region/$TF_VAR_environment/backend.conf" 
+terraform plan -var-file="config/$TF_VAR_organization/$region/$TF_VAR_environment/variables.tfvar"
+if [[ "${ONLY_PLAN}" != "true" ]]; then
+  terraform apply --auto-approve -var-file="config/$TF_VAR_organization/$region/$TF_VAR_environment/variables.tfvar"
+fi

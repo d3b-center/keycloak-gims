@@ -1,0 +1,12 @@
+project_realm_name          = "kidsfirstdrc"
+project_name                = "kidsfirst"
+project_display_name        = "Kids First Data Resource Portal"
+keycloak_endpoint           = "https://kf-keycloak-dev.kf-strides.org"
+portal_endpoint             = "https://portal-dev.kidsfirstdrc.org"
+orcid_endpoint              = "https://sandbox.orcid.org/oauth"
+ras_authorize_endpoint      = "https://stsstg.nih.gov/auth/oauth/v2/authorize"
+ras_token_endpoint          = "https://stsstg.nih.gov/auth/oauth/v2/token"
+ras_userinfo_endpoint       = "https://stsstg.nih.gov/openid/connect/v1.1/userinfo"
+ras_scopes                  = "openid profile email ga4gh_passport_v1"
+facebook_endpoint           = "https://graph.facebook.com"
+zeppelin_valid_redirect_uris = []

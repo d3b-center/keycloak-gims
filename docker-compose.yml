@@ -1,0 +1,14 @@
+version: "3.5"
+services:
+  keycloak:
+    image: jboss/keycloak:14.0.0
+    hostname: keycloak
+    ports:
+      - "8443:8443"
+    environment:
+            KEYCLOAK_USER: admin
+            KEYCLOAK_PASSWORD: password
+            KEYCLOAK_LOGLEVEL: DEBUG
+    volumes:
+      - ./kidsfirst:/opt/jboss/keycloak/themes/kidsfirst
+      - ./include:/opt/jboss/keycloak/themes/include

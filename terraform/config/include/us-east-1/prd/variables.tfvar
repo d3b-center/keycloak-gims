@@ -1,0 +1,13 @@
+project_realm_name          = "includedcc"
+project_name                = "include"
+project_display_name        = "INCLUDE DCC"
+keycloak_endpoint           = "https://keycloak.373997854230.d3b.io"
+portal_endpoint             = "https://portal.includedcc.org"
+orcid_endpoint              = "https://orcid.org/oauth"
+ras_authorize_endpoint      = "https://sts.nih.gov/auth/oauth/v2/authorize"
+ras_token_endpoint          = "https://sts.nih.gov/auth/oauth/v2/token"
+ras_userinfo_endpoint       = "https://sts.nih.gov/openid/connect/v1/userinfo"
+ras_scopes                  = "openid email company profile"
+facebook_endpoint           = "https://graph.facebook.com"
+zeppelin_valid_redirect_uris = [
+]
