@@ -48,51 +48,6 @@ variable "zeppelin_valid_redirect_uris" {
   default = []
 }
 
-variable "orcid_endpoint" {
-  description = "ORCID endpoint"
-  type        = string
-}
-
-variable "orcid_client_id" {
-  description = "Client id for orcid provider"
-  type        = string
-}
-
-variable "orcid_client_secret" {
-  description = "Secret for orcid provider"
-  type        = string
-}
-
-variable "ras_authorize_endpoint" {
-  description = "RAS authorize endpoint"
-  type        = string
-}
-
-variable "ras_token_endpoint" {
-  description = "RAS token endpoint"
-  type        = string
-}
-
-variable "ras_userinfo_endpoint" {
-  description = "RAS userinfo endpoint"
-  type        = string
-}
-
-variable "ras_scopes" {
-  description = "RAS scopes"
-  type        = string
-}
-
-variable "ras_client_id" {
-  description = "Client id for ras provider"
-  type        = string
-}
-
-variable "ras_client_secret" {
-  description = "Secret for ras provider"
-  type        = string
-}
-
 variable "google_client_id" {
   description = "Client id for Google provider"
   type        = string

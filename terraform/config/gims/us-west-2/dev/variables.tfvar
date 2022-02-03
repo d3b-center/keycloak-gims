@@ -1,0 +1,6 @@
+project_realm_name          = "gims"
+project_name                = "gims"
+project_display_name        = "GIMS"
+keycloak_endpoint           = "https://keycloak.project65.us-west-2.aws.ucsf.edu"
+portal_endpoint             = "https://portal.project65.us-west-2.aws.ucsf.edu"
+zeppelin_valid_redirect_uris = []

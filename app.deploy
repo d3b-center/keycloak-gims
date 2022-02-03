@@ -1,0 +1,26 @@
+@Library(value='kids-first/aws-infra-jenkins-shared-libraries@master', changelog=false) _
+deploy {
+    architecture_type      = "aws-ecs-service-type-1"
+    jenkinsfile_name       = "app.deploy"
+    projectName            = "keycloak-gims"
+    dependencies           = "ecr"
+
+    publish_to_public_repo = "true"
+    create_sns_topic       = "0"
+    enable_waf             = "1"
+    environments           = ""
+    internal_app           = "false"
+    entrypoint_command     = "/opt/jboss/tools/docker-entrypoint.sh -b 0.0.0.0"
+    docker_image_type      = "centos8"
+    container_port         = "8443"
+    health_check_path      = "/"
+    health_check_protocol  = "HTTPS"
+    container_protocol     = "HTTPS"
+    post_deploy_config     = "true"
+    chop_cidr              = "[\"0.0.0.0/0\"]"
+    domain_external        = "project65.us-west-2.aws.ucsf.edu"
+    vcpu_container = "2048"
+    memory_container = "4096"
+    vcpu_task = "2048"
+    memory_task = "4096"
+}

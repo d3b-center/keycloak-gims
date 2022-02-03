@@ -10,5 +10,4 @@ services:
             KEYCLOAK_PASSWORD: password
             KEYCLOAK_LOGLEVEL: DEBUG
     volumes:
-      - ./kidsfirst:/opt/jboss/keycloak/themes/kidsfirst
-      - ./include:/opt/jboss/keycloak/themes/include
+      - ./gims:/opt/jboss/keycloak/themes/gims

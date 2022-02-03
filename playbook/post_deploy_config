@@ -10,8 +10,8 @@ export $(aws s3 cp s3://$account_name-${TF_VAR_account_id}-"${region}"-"${TF_VAR
 
 cd ../terraform
 rm -rf .terraform
-terraform init -backend="true" -backend-config="config/$TF_VAR_organization/$region/$TF_VAR_environment/backend.conf" 
-terraform plan -var-file="config/$TF_VAR_organization/$region/$TF_VAR_environment/variables.tfvar"
+terraform init 
+terraform plan -var-file="config/gims/us-west-2/${TF_VAR_environment}/variables.tfvar"
 if [[ "${ONLY_PLAN}" != "true" ]]; then
-  terraform apply --auto-approve -var-file="config/$TF_VAR_organization/$region/$TF_VAR_environment/variables.tfvar"
+  terraform apply --auto-approve -var-file="config/gims/us-west-2/$TF_VAR_environment/variables.tfvar"
 fi
