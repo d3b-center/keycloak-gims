@@ -11,6 +11,7 @@ provider "keycloak" {
   client_id     = var.terraform_client_id
   client_secret = var.terraform_client_secret
   url           = var.keycloak_endpoint
+  tls_insecure_skip_verify      = true
 }
 
 module "kf_strides" {

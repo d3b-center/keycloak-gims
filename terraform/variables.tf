@@ -57,18 +57,3 @@ variable "google_client_secret" {
   description = "Secret for Google provider"
   type        = string
 }
-
-variable "facebook_endpoint" {
-  description = "Facebook endpoint"
-  type        = string
-}
-
-variable "facebook_client_id" {
-  description = "Client id for Facebook provider"
-  type        = string
-}
-
-variable "facebook_client_secret" {
-  description = "Secret for Facebook provider"
-  type        = string
-}

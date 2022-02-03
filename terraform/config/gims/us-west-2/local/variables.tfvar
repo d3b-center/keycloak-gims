@@ -1,0 +1,6 @@
+project_realm_name          = "gims"
+project_name                = "gims"
+project_display_name        = "GIMS"
+keycloak_endpoint           = "https://localhost:8443"
+portal_endpoint             = "https://localhost:8080"
+zeppelin_valid_redirect_uris = []
